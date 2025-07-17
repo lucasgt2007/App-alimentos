@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Registro de alimentos</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Firebase App (core SDK) -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+  <!-- Firestore SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore-compat.js"></script>
+</head>
+<body>
+  <h1>Registro de alimentos</h1>
+
+  <form id="formulario">
+    <label for="comida">¿Qué has comido?</label>
+    <input type="text" id="comida" required />
+
+    <label for="sintomas">¿Cómo te sentiste?</label>
+    <select id="sintomas" required>
+      <option value="">Selecciona</option>
+      <option value="Bien">Bien</option>
+      <option value="Hinchazón">Hinchazón</option>
+      <option value="Dolor">Dolor</option>
+      <option value="Náuseas">Náuseas</option>
+    </select>
+
+    <button type="submit">Enviar</button>
+  </form>
+
+  <p id="mensaje"></p>
+
+  <h2>Historial</h2>
+  <ul id="historial"></ul>
+
+  <hr />
+
+  <!-- Cajita de sorpresa -->
+  <div id="caja-sorpresa">
+    <button onclick="mostrarMensaje()">💌 Mensaje para ti</button>
+    <p id="mensaje-aleatorio" class="oculto"></p>
+    <audio id="sonido-sorpresa" src="https://cdn.pixabay.com/download/audio/2023/03/08/audio_0f08427f55.mp3?filename=pop-111239.mp3" preload="auto"></audio>
+  </div>
+
+
+
+
+
+
+<h2>Gráfico de Síntomas</h2>
+<canvas id="graficoSintomas" width="400" height="200"></canvas>
+
+<!-- Añade Chart.js justo antes del cierre de body -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+
+
+
+
+
+
+  <script src="script.js"></script>
+</body>
+</html>
